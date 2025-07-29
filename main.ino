@@ -178,7 +178,7 @@ void connectToWiFi() {
 void enviarTemperaturaAlServidor() {
   if (WiFi.status() == WL_CONNECTED) {
     HTTPClient http;
-    String url = "https://temperature.zeronetwork.cl/insert.php?id=" + deviceName + "&temp=" + String(temperature, 2);
+    String url = "https://temperature.yourdomain.com/insert.php?id=" + deviceName + "&temp=" + String(temperature, 2);
    http.begin(url);
     int httpCode = http.GET();
     http.end();
